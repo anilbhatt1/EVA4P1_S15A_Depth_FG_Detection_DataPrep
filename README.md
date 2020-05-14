@@ -43,7 +43,8 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 18.	Result will be a white mask of foreground on top of dark background.
 
 Sample FG_BG and its corresponding mask is as below
-  ![FG_BG and its mask](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/FG_BG_And%20Its%20Mask_Sample.jpg)
+  ![FG_BG and its mask]
+  (https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/FG_BG_And%20Its%20Mask_Sample.jpg)
 
 #### FG_BG Depth Creation
 
@@ -54,5 +55,6 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 21.	This colab folder is zipped and copied to gdrive.
 
 Sample FG_BG and its corresponding depth is as below
-  ![FG_BG and its depth](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/FG_BG_And%20Its%20Depth_Sample.jpg)
+  ![FG_BG and its depth]
+  (https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/FG_BG_And%20Its%20Depth_Sample.jpg)
 
