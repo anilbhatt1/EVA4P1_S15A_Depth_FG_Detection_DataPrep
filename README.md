@@ -21,6 +21,8 @@ D)	Log files corresponding to above three zip files which have file names, image
 
 ### FG_BG Preparation – Overlaying Foreground on Background Image. (400K images)
 
+Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
+
 6.	For each background image, each foreground image is overlaid in 20 random positions giving     1 BG * 100 FG * 20 Positions  = 20000 images
 7.	So each background with its flip is generating 20000 + 20000 = 40000 images.
 8.	Similarly 100 background images with their corresponding flip will generate 400K images.
@@ -29,6 +31,8 @@ D)	Log files corresponding to above three zip files which have file names, image
 11.	This saved colab folder is zipped and then copied to gdrive location.
 
 ### FG_BG Mask preparation – Preparing mask of FG from FG_BG images (400K images)
+
+Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
 
 12.	Mask of FG_BG is prepared along FG_BG preparation and written in a separate colab folder.
 13.	As followed for FG_BG, this colab folder is zipped and copied to gdrive.
@@ -39,6 +43,8 @@ D)	Log files corresponding to above three zip files which have file names, image
 18.	Result will be a white mask of foreground on top of dark background.
 
 ### FG_BG Depth Creation
+
+Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DepthCreation_V1.ipynb
 
 19.	We are taking Dense Depth model pre-trained on NYU dataset. This dataset is having similar background as chosen for FG_BG images.
 20.	FG_BG images are passed on to DenseDepth model, resized to Grayscale 200x200 , stored in colab folder.
