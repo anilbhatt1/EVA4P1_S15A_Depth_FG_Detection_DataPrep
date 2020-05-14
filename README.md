@@ -1,4 +1,4 @@
-# S15A - Data Preperation for Depth and FG Detection Network
+#### S15A - Data Preperation for Depth and FG Detection Network (Jointly Done by Anilkumar N Bhatt and Maruthi Srinivas)
 Below are the images created as part of data preparation
 
 Gdrive Location : https://drive.google.com/drive/folders/1raMnribL-gsa4FEpX8QIeyR6yP4XgmP-?usp=sharing
@@ -11,7 +11,7 @@ C)	400K Depth images of FG_BG.
 
 D)	Log files corresponding to above three zip files which have file names, image size of BG, image size of FG and bounding box coordinates of overlaid FG image.
 
-## Details are as listed below
+#### Details are as listed below
 
 1.	This part deals with data preparation which will be later used by a network that will predict foreground from background and how far foreground is from camera w.r.to background (depth).
 2.	Since data required for training this network is not publicly available & crowdsourcing is also not possible, data preparation strategy as follows were adopted.
@@ -19,7 +19,7 @@ D)	Log files corresponding to above three zip files which have file names, image
 4.	Downloaded 100 foreground images. Images of people were selected. Removed the background using Microsoft power point, added transparent layer, cropped the image to select object only and saved the image.
 5.	Flip the 100 background images we created in step 3 and save it. This makes total 200 background images (100 – Regular, 100 – Flipped)
 
-### FG_BG Preparation – Overlaying Foreground on Background Image. (400K images)
+#### FG_BG Preparation – Overlaying Foreground on Background Image. (400K images)
 
 Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
 
@@ -30,7 +30,7 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 10.	While overlaying, random positions are generated in such a way to ensure that foreground object remains within the background frame.
 11.	This saved colab folder is zipped and then copied to gdrive location.
 
-### FG_BG Mask preparation – Preparing mask of FG from FG_BG images (400K images)
+#### FG_BG Mask preparation – Preparing mask of FG from FG_BG images (400K images)
 
 Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
 
@@ -42,11 +42,17 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 17.	Next we will overlay converted foreground on top of converted background. 
 18.	Result will be a white mask of foreground on top of dark background.
 
-### FG_BG Depth Creation
+Sample FG_BG and its corresponding mask is as below
+  ![FG_BG and its mask](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/FG_BG_And%20Its%20Mask_Sample.jpg)
+
+#### FG_BG Depth Creation
 
 Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DepthCreation_V1.ipynb
 
 19.	We are taking Dense Depth model pre-trained on NYU dataset. This dataset is having similar background as chosen for FG_BG images.
 20.	FG_BG images are passed on to DenseDepth model, resized to Grayscale 200x200 , stored in colab folder.
 21.	This colab folder is zipped and copied to gdrive.
+
+Sample FG_BG and its corresponding depth is as below
+  ![FG_BG and its depth](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/FG_BG_And%20Its%20Depth_Sample.jpg)
 
