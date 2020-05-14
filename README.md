@@ -30,6 +30,10 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 10.	While overlaying, random positions are generated in such a way to ensure that foreground object remains within the background frame.
 11.	This saved colab folder is zipped and then copied to gdrive location.
 
+Sample BG, its flip, FG and FG overlaid on BG is as below
+
+  ![BG_Flip_FG_FG_BG](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/BG_Flip_FG_FG_BG_Sample.png)
+
 #### FG_BG Mask preparation – Preparing mask of FG from FG_BG images (400K images)
 
 Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
