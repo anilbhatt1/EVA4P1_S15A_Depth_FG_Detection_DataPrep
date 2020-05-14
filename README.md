@@ -3,7 +3,7 @@ Below are the images created as part of data preparation
 
 Gdrive Location : https://drive.google.com/drive/folders/1raMnribL-gsa4FEpX8QIeyR6yP4XgmP-?usp=sharing
 
-A)	100 BG and its corresponding 100 Flip Images 
+A)	100 BG and its corresponding 100 Flip Images \n
 B)	400K FG_BG images and its corresponding 400K mask 
 C)	400K Depth images of FG_BG
 D)	Log files corresponding to above three zip files which have file names, image size of BG, image size of FG and bounding box coordinates of overlaid FG image.
