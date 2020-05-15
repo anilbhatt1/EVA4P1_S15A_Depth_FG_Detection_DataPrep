@@ -27,10 +27,10 @@ Code for statistics calculation : https://github.com/anilbhatt1/EVA4P1_S15A_Dept
 #### Data preperation details are as listed below
 
 1.	This part deals with data preparation which will be later used by a network that will predict foreground from background and how far foreground is from camera w.r.to background (depth).
-2.	Since data required for training this network is not publicly available & crowdsourcing is also not possible, data preparation strategy as follows were adopted.
-3.	Downloaded 100 background images from web. Images of public places mostly malls & shopping complexes were downloaded. Resized them to 192x192
-4.	Downloaded 100 foreground images. Images of people were selected. Removed the background using Microsoft power point using 'Remove Background' option thereby adding transparent layer. After that cropped this image using 'Crop' option under 'Format' tab in PPT to select object only. Then saved this image in 'png' format so that transparency (alpha channel) is retained.
-5.	Flipped the 100 background images we created in step 3 and saved it. This makes total 200 background images (100 – Regular, 100 – Flipped) all in jpg format
+2.	Since data required for training this network is not publicly available & crowdsourcing is also not possible, data preparation strategy as follows was adopted.
+3.	Downloaded 100 background images from web. Images of public places (mostly malls & shopping complexes) were selected for download. Resized them to 192x192.
+4.	Downloaded 100 foreground images. Images of people were selected for download. Removed the background using Microsoft power point 'Remove Background' option thereby adding transparent layer. Cropped this image using 'Crop' option under 'Format' tab in PPT so that object only is retained. Then saved the image in 'png' format so that transparency (alpha channel) is retained.
+5.	Flipped the 100 background images created in step 3. This makes total 200 background images (100 – Regular, 100 – Flipped) all in jpg format.
 
 ###### Sample BG images
 ![Sample_BG_Images](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/BG_Sample10.png)
@@ -45,15 +45,15 @@ Code for statistics calculation : https://github.com/anilbhatt1/EVA4P1_S15A_Dept
 
 Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
 
-6.	For each background image, each foreground image is overlaid in 20 random positions giving  1 BG * 100 FG * 20 Positions  = 20000 images
-7.	So each background with its flip is generating 20000 + 20000 = 40000 images.
-8.	Similarly 100 background images with their corresponding flip will generate 400K images.
-9.	These 400K images are saved one-by-one with naming convention like Img_fg_bg_20217.jpg in a colab folder. 
-10.	While overlaying, random positions are generated in such a way to ensure that foreground object remains within the background frame. We achieved this by calculating delta between width of BG & width of FG, delta between height of BG & height of FG and generated random positions between low as 0 and high as delta values. This ensured FG images remain within BG canvas like below.
+6.	For each background image, each foreground image was overlaid in 20 random positions giving  1 BG * 100 FG * 20 Positions  = 20,000 images
+7.	So each background with its flip generated 20000 + 20000 = 40000 images.
+8.	In this manner, 100 background images with their corresponding flip in total generated 400K images.
+9.	These 400K images were saved one-by-one with naming convention as Img_fg_bg_202217.jpg in a colab folder. 
+10.	While overlaying, random positions were generated in such a way to ensure that foreground object remains within the background frame. We achieved this by calculating delta between width of BG & width of FG, delta between height of BG & height of FG and then generating random positions between lower range as 0 and higher range as delta values. This ensured FG images remain within BG canvas as shown below.
 
 ![Random_Positions](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/Random_Positions.png)
 
-11.	Saved colab folder is zipped and then copied to gdrive location.
+11.	Saved colab folder is zipped and copied to gdrive location.
 
 ###### Sample FG_BG
 
@@ -63,13 +63,13 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 
 Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
 
-12.	Mask of FG_BG is prepared along FG_BG preparation and written in a separate colab folder.
-13.	As followed for FG_BG, this colab folder is zipped and copied to gdrive.
-14.	Foreground image that we are going to overlay over background is converted to gray scale. FG image already have a transparent background with object in it.
-15.	Hence all those pixels which represent object will have a pixel value greater than zero. We will make these pixels 255 so they will be bright and rest all as zero.
-16.	Next we will convert background image to gray scale. Here we will make all those pixels that are > 0 to 0. Result will be background turning dark.
-17.	Next we will overlay converted foreground on top of converted background. 
-18.	Result will be a white mask of foreground on top of dark background.
+12.	Mask of FG_BG was prepared along FG_BG but written in a separate colab folder.
+13.	As followed for FG_BG, this colab folder was zipped at end and then copied to gdrive.
+14.	Foreground image that we were going to overlay on top of background was converted to gray scale. FG image already has transparent background with object only retained.
+15.	Hence only those pixels that represent object have pixel values greater than zero. We made these pixel values 255 so that they will be brighter compared to rest of the image pixels which were zeroes.
+16.	Next we converted background image to gray scale. In this case, we made all those pixels that are > 0 as 0. Result was that entire background turned to be dark.
+17.	Then we overlaid the converted foreground image from step 15 on top of converted background image from step 16. 
+18.	Result was a white mask of foreground image on top of dark background image.
 
 ###### FG_BG Mask generated is as below
 
@@ -79,9 +79,9 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 
 Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DepthCreation_V1.ipynb
 
-19.	We are taking Dense Depth model pre-trained on NYU dataset. This dataset is having similar background as chosen for FG_BG images.
-20.	FG_BG images are passed on to DenseDepth model, resized to Grayscale 200x200 , stored in colab folder.
-21.	This colab folder is zipped and copied to gdrive.
+19.	We used Dense Depth model that was pre-trained on NYU dataset. We opted for NYU dataset because this dataset is having similar background as the FG_BG images that we chosen.
+20.	FG_BG images were passed on to DenseDepth model. Depth images generated were resized to Grayscale 200 x 200 and stored in colab folder.
+21.	This colab folder was zipped at end and copied over to gdrive.
 
 ###### FG_BG Depth generated is as below
 
