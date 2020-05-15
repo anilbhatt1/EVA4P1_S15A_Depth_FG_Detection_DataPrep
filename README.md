@@ -30,10 +30,10 @@ Code for statistics calculation : https://github.com/anilbhatt1/EVA4P1_S15A_Dept
 4.	Downloaded 100 foreground images. Images of people were selected. Removed the background using Microsoft power point using 'Remove Background' option thereby adding transparent layer. After that cropped this image using 'Crop' option under 'Format' tab in PPT to select object only. Then saved this image in 'png' format so that transparency (alpha channel) is retained.
 5.	Flipped the 100 background images we created in step 3 and saved it. This makes total 200 background images (100 – Regular, 100 – Flipped) all in jpg format
 
-Sample BG images
+###### Sample BG images
 ![Sample_BG_Images](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/BG_Sample10.png)
 
-Corresponding BG Flip images
+###### Corresponding BG Flip images
 ![Sample_BG_Flip_Images](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/BG_Flip_Sample10.png)
 
 #### FG_BG Preparation – Overlaying Foreground on Background Image. (400K images)
@@ -50,7 +50,7 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 
 11.	Saved colab folder is zipped and then copied to gdrive location.
 
-Sample FG_BG
+###### Sample FG_BG
 
   ![Sample_FG_BG](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/FG_BG_Sample10.png)
 
@@ -66,7 +66,7 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 17.	Next we will overlay converted foreground on top of converted background. 
 18.	Result will be a white mask of foreground on top of dark background.
 
-FG_BG Mask generated is as below
+###### FG_BG Mask generated is as below
 
   ![FG_BG mask](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/FG_BG_Mask_Sample10.png)
 
@@ -78,7 +78,7 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 20.	FG_BG images are passed on to DenseDepth model, resized to Grayscale 200x200 , stored in colab folder.
 21.	This colab folder is zipped and copied to gdrive.
 
-FG_BG Depth generated is as below
+###### FG_BG Depth generated is as below
 
   ![FG_BG depth](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/FG_BG_Depth_Sample10.png)
 
