@@ -41,15 +41,9 @@ Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/
 8.	Similarly 100 background images with their corresponding flip will generate 400K images.
 9.	These 400K images are saved one-by-one with naming convention like Img_fg_bg_20217.jpg in a colab folder. 
 10.	While overlaying, random positions are generated in such a way to ensure that foreground object remains within the background frame. We achieved this by calculating delta between width of BG & width of FG, delta between height of BG & height of FG and generated random positions between low as 0 and high as delta values. This ensured FG images remain within BG canvas like below.
-----------------------------------
-|    (x_a,y_a)       (x_b,y_b)   |
-|    *---------------*           |
-|    |               |           |
-|    |               |           |
-|    *---------------*           |
-|    (x_c,y_c)       (x_d,y_d)   |
-|                                |
-----------------------------------
+
+![Random_Positions](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Random_Positions.png)
+
 11.	Saved colab folder is zipped and then copied to gdrive location.
 
 Sample BG, its flip, FG and FG overlaid on BG is as below
