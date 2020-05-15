@@ -4,9 +4,7 @@ Below are the images created as part of data preparation
 ###### Gdrive Location : https://drive.google.com/drive/folders/1raMnribL-gsa4FEpX8QIeyR6yP4XgmP-?usp=sharing
 
 -	100 BG and its corresponding 100 Flip Images, 192X192X3, jpg 
-
 - 100 FG images, 192x192x4, png, transparent background 
-
 -	400K FG_BG images, 192x192x3, jpg 
 
 ###### Mean 		: [0.56670278 0.49779153 0.43632878], Std-Dev 	: [0.38389994 0.30871084 0.25551239], Size 		:  3 GB
