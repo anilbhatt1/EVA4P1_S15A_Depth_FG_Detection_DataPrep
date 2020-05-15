@@ -4,21 +4,22 @@ Below are the images created as part of data preparation
 ###### Gdrive Location : https://drive.google.com/drive/folders/1raMnribL-gsa4FEpX8QIeyR6yP4XgmP-?usp=sharing
 ###### Total Size : 4.9 GB
 
--	100 BG and its corresponding 100 Flip Images, 192X192X3, jpg 
-- 100 FG images, 192x192x4, png, transparent background 
--	400K FG_BG images, 192x192x3, jpg 
+-	100 BG and its corresponding 100 Flip Images, Shape : 192X192X3, Type : jpg, Folder Name : BG_and_Its Flip Images
+- 100 FG images, Shape : 192x192x4, Type : png, transparent background, Folder Name : FG_Images
+-	400K FG_BG images, Shape : 192x192x3, Type : jpg, Zip File Name : FG_BG_400K.zip
 
 ###### Mean 		: [0.56670278 0.49779153 0.43632878], Std-Dev 	: [0.38389994 0.30871084 0.25551239], Size 		:  3 GB
 
--	Corresponding 400K FG_BG_Masks, 192x192x1, jpg
+-	Corresponding 400K FG_BG_Masks, Shape : 192x192x1, Type : jpg, Zip File Name : FG_BG_Mask_400K.zip
 
 ###### Mean		:   [0.20249742], Std-Dev	: [0.39961225], Size		: 906 MB
 
--	400K Depth images of FG_BG, 200x200x1, jpg
+-	400K Depth images of FG_BG, Shape : 200x200x1, Type : jpg, Zip File Name : FG_BG_Depth_400K.zip
 
 ###### Mean		: [0.32939295], Std-Dev		: [0.24930712], Size		: 1 GB
 
 -	Log files corresponding to above three zip files which have file names, image size of BG, image size of FG and bounding box coordinates of overlaid FG image.
+###### FG_BG_Filename_Logs.txt, FG_BG_Mask_Filename_Logs.txt, Log_FG_BG_Depth_400K.txt
 
 Code for statistics calculation : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Statistics_FG_BG_Mask_Depth.ipynb
 
