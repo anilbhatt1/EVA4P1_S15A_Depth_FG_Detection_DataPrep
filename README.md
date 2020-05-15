@@ -36,6 +36,9 @@ Code for statistics calculation : https://github.com/anilbhatt1/EVA4P1_S15A_Dept
 ###### Corresponding BG Flip images
 ![Sample_BG_Flip_Images](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/BG_Flip_Sample10.png)
 
+###### Sample FG images
+![Sample_FG_Images](https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Images_For_ReadMe/FG_Sample10.png)
+
 #### FG_BG Preparation – Overlaying Foreground on Background Image. (400K images)
 
 Code : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection/blob/master/EVA4P1_S15_DataPrep_V1.ipynb
