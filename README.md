@@ -2,6 +2,7 @@
 Below are the images created as part of data preparation
 
 ###### Gdrive Location : https://drive.google.com/drive/folders/1raMnribL-gsa4FEpX8QIeyR6yP4XgmP-?usp=sharing
+###### Total Size : 4.9 GB
 
 -	100 BG and its corresponding 100 Flip Images, 192X192X3, jpg 
 - 100 FG images, 192x192x4, png, transparent background 
