@@ -1,11 +1,11 @@
 #### S15A - Data Preperation for Depth and FG Detection Network (Jointly Done by Anilkumar N Bhatt and Maruthi Srinivas)
 Below are the images created as part of data preparation
 
-Gdrive Location : https://drive.google.com/drive/folders/1raMnribL-gsa4FEpX8QIeyR6yP4XgmP-?usp=sharing
+###### Gdrive Location : https://drive.google.com/drive/folders/1raMnribL-gsa4FEpX8QIeyR6yP4XgmP-?usp=sharing
 
-A)	100 BG and its corresponding 100 Flip Images, 192X192X3, jpg 
+-	100 BG and its corresponding 100 Flip Images, 192X192X3, jpg 
 
-B)	100 FG images, 192x192x4, png, transparent background 
+- 100 FG images, 192x192x4, png, transparent background 
 
 C)	400K FG_BG images, 192x192x3, jpg 
 
