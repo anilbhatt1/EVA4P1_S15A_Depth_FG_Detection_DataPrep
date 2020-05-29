@@ -8,18 +8,20 @@ Below are the images created as part of data preparation
 - 100 FG images, Shape : 192x192x4, Type : png, transparent background, Folder Name : FG_Images
 -	400K FG_BG images, Shape : 192x192x3, Type : jpg, Zip File Name : FG_BG_400K.zip
 
-###### Mean 		: [0.56670278 0.49779153 0.43632878], Std-Dev 	: [0.38389994 0.30871084 0.25551239], Size 		:  3 GB
+###### Mean FG_BG		: [0.56670278 0.49779153 0.43632878], Std-Dev 	: [0.25049532 0.2468085  0.25520498], Size 		:  3 GB
 
 -	Corresponding 400K FG_BG_Masks, Shape : 192x192x1, Type : jpg, Zip File Name : FG_BG_Mask_400K.zip
 
-###### Mean		:   [0.20249742], Std-Dev	: [0.39961225], Size		: 906 MB
+###### Mean Mask		: [0.20249742], Std-Dev	: [0.39961225], Size		: 906 MB
 
 -	400K Depth images of FG_BG, Shape : 200x200x1, Type : jpg, Zip File Name : FG_BG_Depth_400K.zip
 
-###### Mean		: [0.32939295], Std-Dev		: [0.24930712], Size		: 1 GB
+###### Mean	Depth	: [0.32939295], Std-Dev		: [0.24930712], Size		: 1 GB
 
 -	Log files corresponding to above three zip files which have file names, image size of BG, image size of FG and bounding box coordinates of overlaid FG image.
 ###### FG_BG_Filename_Logs.txt, FG_BG_Mask_Filename_Logs.txt, Log_FG_BG_Depth_400K.txt
+
+###### Mean of BG+Its Flip Images : [0.58245822 0.51269352 0.43691653] , Std-Dev : [0.24252189 0.24318804 0.25401604] 
 
 Code for statistics calculation : https://github.com/anilbhatt1/EVA4P1_S15A_Depth_FG_Detection_DataPrep/blob/master/Statistics_FG_BG_Mask_Depth.ipynb
 
